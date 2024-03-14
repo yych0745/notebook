@@ -22,13 +22,13 @@ vllm 本地跑不起来，cuda版本配不上pytorch
 
 结构示意图
 
-![image-20240314154657806](/Users/yych/Library/Application Support/typora-user-images/image-20240314154657806.png)
+![image-20240314154657806](/Users/yych/repository/notebook/picture/image-20240314154657806.png)
 
 ### [输入](https://blog.csdn.net/u011630575/article/details/82894698)
 
 输入是一个词向量，就是将一个单词转化为一个向量，最简单的就是one-hot：生成一个distinc(单词)维度的矩阵，每个单词分配一个唯一的1。通过不同位置的1来识别是哪个单词。
 
-![image-20240314154717487](/Users/yych/Library/Application Support/typora-user-images/image-20240314154717487.png)
+![image-20240314154717487](/Users/yych/repository/notebook/picture/image-20240314154717487.png)
 
 #### 计算过程
 
@@ -46,7 +46,7 @@ vllm 本地跑不起来，cuda版本配不上pytorch
 2. 缩放score并进行softmax，转化为概率
 3. 使用概率乘以各个输入单词的v向量，并相加，就得到该层的输出向量
 
-![image-20240314154739226](/Users/yych/Library/Application Support/typora-user-images/image-20240314154739226.png)
+![image-20240314154739226](/Users/yych/repository/notebook/picture/image-20240314154739226.png)
 
 **注意**
 
